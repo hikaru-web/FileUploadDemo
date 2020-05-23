@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <title>express.html</title>
+  </head>
+  <body>
+      画像は<img th:src="${base64image}"/>です
+    <form method="post" enctype="multipart/form-data" action="/sample/uploadComplete">
+        <input type="submit" value="保存する"/>
+        <input type="hidden" name="file" th:value="${file}"/>
+    </form>
+  </body>
+</html>
